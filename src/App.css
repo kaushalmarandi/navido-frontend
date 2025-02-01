@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Quicksand:wght@300;400&display=swap");
+
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+/* Background */
+body {
+  background: url("https://images.unsplash.com/photo-1654355229863-95a8a7a779dd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    no-repeat center center fixed;
+  background-size: cover;
+  top: 10%;
+  opacity: 0.95;
+  height: 100vh;
+  position: relative;
+}
+
+/* Main App Container */
+.App {
+  width: 90%;
+  margin-top: 50%;
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 25px;
+  background-color: rgba(211, 226, 230, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(161, 158, 158, 0.2);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  color: #333;
+  font-size: 2.5em;
+  font-family: "Playwrite IN", serif;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.route-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 25px;
+  background-color: rgba(176, 203, 211, 0.832);
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(22, 22, 22, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  color: #000000;
+  margin-bottom: 8px;
+}
+
+.form-input {
+  padding: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #c6c9c97b;
+  background-color: rgba(197, 218, 224, 0.9);
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #c0a778ea;
+  outline: none;
+}
+
+.submit-btn {
+  padding: 12px;
+  background-color: #236083;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+}
+
+.submit-btn:disabled {
+  background-color: #79b0c0;
+  cursor: not-allowed;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #1776a9;
+}
+
+/* Loading Container for Lottie and Messages */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Lottie Animation Styling */
+.lottie-animation {
+  width: 100px; /* Adjust the size as needed */
+  height: 100px; /* Adjust the size as needed */
+}
+
+/* Loading Text */
+.loading-text {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #ef720b;
+  margin-top: 0px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Route Details */
+.route-details {
+  margin-top: 35px;
+}
+
+.route-heading {
+  font-size: 1.8em;
+  font-family: "Playwrite IN", serif;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Route Summary */
+.route-summary {
+  background-color: rgba(212, 209, 209, 0.361);
+  padding: 18px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Route Steps */
+.route-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Step Toggle (Collapsible) */
+.route-step {
+  background-color: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.route-step:hover {
+  background-color: rgba(101, 186, 197, 0.9);
+  transform: scale(1.05);
+}
+
+.route-step.expanded {
+  background-color: rgba(216, 214, 214, 0.9);
+  transform: scale(1.02);
+}
+
+.step-toggle {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.step-toggle:hover {
+  color: #bb5705;
+  cursor: pointer;
+}
+
+.step-eta {
+  color: #222222;
+}
+
+.step-details {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #141414;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 10px;
+}
