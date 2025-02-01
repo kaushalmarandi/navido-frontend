@@ -1,16 +1,9 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-# 🚀 Navido Frontend
+# 🚀 Navido Frontend        https://navido.tech
 
 ## 🌍 Overview
 Navido is a **map route optimizer** designed to provide users with the most efficient travel routes based on **real-time traffic data**. The frontend is built using **React** and styled with **CSS**, offering a seamless experience for users to input their locations and receive **optimized navigation suggestions**.
+![UI](welcomeui.png)
 
 ---
 
@@ -42,7 +35,7 @@ Ensure you have the following installed:
 ### 🔧 Setup Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/navido-frontend.git
+   git clone https://github.com/kaushalmarandi/navido-frontend.git
    cd navido-frontend
    ```
 2. Install dependencies:
@@ -66,6 +59,10 @@ The frontend communicates with the **Navido Backend API**, hosted on **Azure**, 
 ### 📡 Fetching Optimized Routes
 The frontend sends a **POST** request to retrieve route details.
 
+### Access Backend source code on
+- https://github.com/kaushalmarandi/MapRoute
+
+
 #### 🌐 API Endpoint
 ```http
 POST https://routeme.azurewebsites.net/maps/route
@@ -81,6 +78,9 @@ POST https://routeme.azurewebsites.net/maps/route
 ```
 
 #### 📤 Response Example
+
+![response](responseui.png)
+
 ```json
 {
   "totalDistance": "4500 km",
@@ -108,16 +108,14 @@ To deploy this project:
 
 ---
 
-## 🤝 Contribution
-Contributions are welcome! To contribute:
-1. **Fork** the repository.
-2. **Create** a new branch.
-3. **Submit** a pull request with improvements.
 
-For any issues, report them in the [GitHub Issues](https://github.com/yourusername/navido-frontend/issues) section.
+# React + Vite
 
----
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 📜 License
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
 
